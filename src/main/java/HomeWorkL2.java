@@ -3,42 +3,32 @@ import java.util.Scanner;
 public class HomeWorkL2 {
     public static void main(String[] args) {
 
-        SumInTheLimit();
+        SumInTheLimit(7, 9);
         System.out.println();
 
-        PositiveOrNegative();
+        PositiveOrNegative(5);
         System.out.println();
 
-        PositiveOrNegativeB();
+        PositiveOrNegativeB(-1);
         System.out.println();
 
-        PrintString();
+        PrintString("Toto", 3);
         System.out.println();
 
-        LeapYear();
+        LeapYear(1111);
+
+        tree();
     }
 
-    public static boolean SumInTheLimit() {
-        System.out.print("Input the first number: ");
-        Scanner a = new Scanner(System.in);
-        int num_a = a.nextInt();
-
-        System.out.print("Input the second number: ");
-        Scanner b = new Scanner(System.in);
-        int num_b = b.nextInt();
-
-        if((num_a + num_b >= 10) || (num_a + num_b >= 20)) {
+    public static boolean SumInTheLimit(int a, int b) {
+        if((a + b >= 10) && (a + b >= 20)) {
             return true;
         } else {
             return false;
         }
     }
 
-    public static void PositiveOrNegative() {
-        System.out.print("Input rhe number: ");
-        Scanner input = new Scanner(System.in);
-        int num = input.nextInt();
-
+    public static void PositiveOrNegative(int num) {
         if(num >= 0) {
             System.out.println("It is a positive number.");
         } else {
@@ -46,11 +36,7 @@ public class HomeWorkL2 {
         }
     }
 
-    public static boolean PositiveOrNegativeB() {
-        System.out.print("Input rhe number: ");
-        Scanner input = new Scanner(System.in);
-        int num = input.nextInt();
-
+    public static boolean PositiveOrNegativeB(int num) {
         if (num >= 0) {
             return false;
         } else {
@@ -58,29 +44,39 @@ public class HomeWorkL2 {
         }
     }
 
-    public static void PrintString() {
-        System.out.print("Input the string: ");
-        Scanner inputS = new Scanner(System.in);
-        String string = inputS.nextLine();
-
-        System.out.print("Input the number: ");
-        Scanner inputN = new Scanner(System.in);
-        int num = inputN.nextInt();
-
+    public static void PrintString(String string, int num) {
         for(int i = 0; i < num; i++) {
             System.out.println(string);
         }
     }
 
-    public static boolean LeapYear() {
-        System.out.print("Input the year: ");
-        Scanner input = new Scanner(System.in);
-        int year = input.nextInt();
-
+    public static boolean LeapYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public static void tree() {
+        int rowCount = 6;
+        String space = "";
+        for(int i = 0; i < rowCount; i++) {
+            space = "";
+            for(int j = 0; j < rowCount - i - 1; j++) {
+                space += " ";
+            }
+            for(int j = i; j < i + 2; j++) {
+                if(i == 0) {
+                    space += "*";
+                    break;
+                } else {
+                    for(int n = 1; n < i+1; n++) {
+                        space += "*";
+                    }
+                }
+            }
+            System.out.println(space);
         }
     }
 }
