@@ -1,18 +1,18 @@
 public class HomeWorkApp {
     public static void main(String[] args) {
-        printThreeWords();
-        System.out.println();
-        System.out.println("checkSumSign");
+        //printThreeWords();
+        //System.out.println();
+        //System.out.println("checkSumSign");
 
-        checkSumSign();
-        System.out.println();
-        System.out.println("printColor");
+        //checkSumSign();
+        //System.out.println();
+        //System.out.println("printColor");
 
-        printColor();
-        System.out.println();
-        System.out.println("compareNumbers");
+        //printColor();
+        //System.out.println();
+        //System.out.println("compareNumbers");
 
-        compareNumbers();
+        //compareNumbers();
     }
     public static void printThreeWords() {
         System.out.println("Orange");
