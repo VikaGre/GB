@@ -34,6 +34,7 @@ public class StaffMember {
         System.out.println();
 
         //task 2
+
         StaffMember sm2 = new StaffMember("Alex Sorokin Alexandrovich", "programmer",
                 "alex@email.ru", 89991112233L, 100000, 20);
         System.out.println("The name is: " + sm2.NameSurnamePatronymic + '\n' + "The position is: " + sm2.position + '\n' +
